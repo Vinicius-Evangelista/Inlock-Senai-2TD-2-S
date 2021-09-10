@@ -18,7 +18,7 @@ CREATE TABLE jogo(
 	idEstudio SMALLINT FOREIGN KEY REFERENCES estudio(idEstudio),
 	nomeJogo VARCHAR(100) UNIQUE NOT NULL,
 	dataLancamento DATE NOT NULL,
-	descricao VARCHAR(250),
+	descricao VARCHAR(250) NOT NULL,
 	valor MONEY NOT NULL
 );
 GO
