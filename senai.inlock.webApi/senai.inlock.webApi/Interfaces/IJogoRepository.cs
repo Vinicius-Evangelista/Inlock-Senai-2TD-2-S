@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace senai.inlock.webApi_.Interfaces
 {
-    interface IJogosRepository
+    interface IJogoRepository
     {
         //CRUD
 
@@ -37,6 +37,14 @@ namespace senai.inlock.webApi_.Interfaces
         /// </summary>
         /// <param name="id">id do jogo que será deletado</param>
         public void Deletarjogo(int id);
+
+
+        /// <summary>
+        /// retorna um jogo retornado por id
+        /// </summary>
+        /// <param name="id">id do jogo</param>
+        /// <returns> o jogo exigido</returns>
+        public JogoDomain BuscarPorId(int id);
         
     }
 }

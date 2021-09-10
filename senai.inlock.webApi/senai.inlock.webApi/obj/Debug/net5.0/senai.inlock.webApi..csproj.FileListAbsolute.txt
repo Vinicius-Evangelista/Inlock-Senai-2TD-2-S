@@ -1,0 +1,6 @@
+C:\Users\Vinicius\Desktop\Inlock-Senai-2TD-2-S\senai.inlock.webApi\senai.inlock.webApi\obj\Debug\net5.0\senai.inlock.webApi..csproj.AssemblyReference.cache
+C:\Users\Vinicius\Desktop\Inlock-Senai-2TD-2-S\senai.inlock.webApi\senai.inlock.webApi\obj\Debug\net5.0\senai.inlock.webApi..GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Vinicius\Desktop\Inlock-Senai-2TD-2-S\senai.inlock.webApi\senai.inlock.webApi\obj\Debug\net5.0\senai.inlock.webApi..AssemblyInfoInputs.cache
+C:\Users\Vinicius\Desktop\Inlock-Senai-2TD-2-S\senai.inlock.webApi\senai.inlock.webApi\obj\Debug\net5.0\senai.inlock.webApi..AssemblyInfo.cs
+C:\Users\Vinicius\Desktop\Inlock-Senai-2TD-2-S\senai.inlock.webApi\senai.inlock.webApi\obj\Debug\net5.0\senai.inlock.webApi..csproj.CoreCompileInputs.cache
+C:\Users\Vinicius\Desktop\Inlock-Senai-2TD-2-S\senai.inlock.webApi\senai.inlock.webApi\obj\Debug\net5.0\senai.inlock.webApi..MvcApplicationPartsAssemblyInfo.cache
