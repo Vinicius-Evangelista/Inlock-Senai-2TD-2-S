@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace senai.inlock.webApi_.Interfaces
 {
-    interface IJogosRepository
+    interface IJogoRepository
     {
         //CRUD
 

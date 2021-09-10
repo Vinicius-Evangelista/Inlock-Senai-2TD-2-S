@@ -19,7 +19,7 @@ namespace senai.inlock.webApi_.Repositories
 
         public List<EstudioDomain> ListarEstudios()
         {
-            List<EstudioDomain> listaEstudios = new List<EstudioDomain>();
+           List<EstudioDomain> listaEstudios = new List<EstudioDomain>();
 
            using (SqlConnection con = new SqlConnection(stringConexao))
            {
