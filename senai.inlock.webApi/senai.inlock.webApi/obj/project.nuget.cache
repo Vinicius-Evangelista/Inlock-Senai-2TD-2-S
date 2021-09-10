@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "DE91OwJulJsQoQMzO4POyG4Rj8L6/3Sh7AgeNnDvTrwO1rV5UHBR3ySiVfLxoBVsVRAztJDK43Y+vEgaOl+5GQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Vinicius\\Desktop\\Inlock-Senai-2TD-2-S\\senai.inlock.webApi\\senai.inlock.webApi\\senai.inlock.webApi..csproj",
@@ -14,5 +15,11 @@
     "C:\\Users\\Vinicius\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\Vinicius\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
   ],
+=======
+  "dgSpecHash": "CGFZE3iWW5ny+bBs5pnXzkYQHPMsW2zp9LNLCsfn7yM5GIX9BmpserJi8hwJA6HO+7yOZA+hHjF2uz6p2f9/GA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\samue\\Desktop\\T_Inlock\\senai.inlock.webApi\\senai.inlock.webApi\\senai.inlock.webApi..csproj",
+  "expectedPackageFiles": [],
+>>>>>>> d39b3dadd7f81a03e6ba7c7ef5a62afb06dffb24
   "logs": []
 }
