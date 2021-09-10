@@ -7,5 +7,9 @@ namespace senai.inlock.webApi_.Domains
 {
     public class TipoUsuarioDomain
     {
+        public int idTipoUsuario { get; set; }
+
+        public string titulo { get; set; }
+
     }
 }
