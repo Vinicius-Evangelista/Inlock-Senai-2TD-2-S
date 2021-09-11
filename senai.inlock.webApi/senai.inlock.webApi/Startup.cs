@@ -95,7 +95,7 @@ namespace senai.inlock.webApi_
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Filmes.webApi");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "senai.inlock.webApi");
                 c.RoutePrefix = string.Empty;
             });
 

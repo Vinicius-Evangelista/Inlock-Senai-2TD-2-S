@@ -69,17 +69,13 @@ namespace senai.inlock.webApi_.Controllers
 
             }
 
-
            return NotFound(
                 new
                 {
                     mensagem = "Usuario não encontrado !",
                     erro = true
                 }
-
-
-                );
-
+            );
         }
     }
 }
