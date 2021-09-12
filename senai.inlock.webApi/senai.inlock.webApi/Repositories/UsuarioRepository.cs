@@ -10,10 +10,16 @@ namespace senai.inlock.webApi_.Repositories
 {
     public class UsuarioRepository : IUsuarioRepository
     {
+<<<<<<< HEAD
         const string STRINGCONEXAO = @"Data Source= DESKTOP-DHSRSVI\SQLEXPRESS; initial catalog=inlock_games_tarde; user Id=sa; pwd=senai@132";
+=======
+        private string stringConexao = "Data Source=DESKTOP-20INV7D\\SQLEXPRESS; initial catalog=inlock_games_tarde; user Id=sa; pwd=SenaiSamuel1";
+
+        //const string STRINGCONEXAO = @"Data source= DESKTOP-DHSRSVI\SQLEXPRESS; initial_catalog= inlock_games_tarde; user Id=sa; pwd=senai@132;";
+>>>>>>> e52c75cffe3304592ac8116ffa273f6ac75f8055
         public UsuarioDomain Login(string email, string senha)
         {
-            using (SqlConnection sqlConnection = new SqlConnection(STRINGCONEXAO))
+            using (SqlConnection sqlConnection = new SqlConnection(stringConexao))
             {
                 string querySelect = @"SELECT t.idTipoUsuario,idUsuario, email, senha FROM usuario
                                        JOIN tipoUsuario t

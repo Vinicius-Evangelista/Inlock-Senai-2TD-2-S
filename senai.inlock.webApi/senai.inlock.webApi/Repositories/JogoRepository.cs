@@ -3,7 +3,6 @@ using senai.inlock.webApi_.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -13,9 +12,11 @@ namespace senai.inlock.webApi_.Repositories
     {
         const string STRINGCONEXAO = @"Data Source= DESKTOP-DHSRSVI\SQLEXPRESS; initial catalog=inlock_games_tarde; user Id=sa; pwd=senai@132";
 
+        //const string STRINGCONEXAO = @"Data source= DESKTOP-DHSRSVI\SQLEXPRESS; initial_catalog= inlock_games_tarde; user Id=sa; pwd=senai@132;";
+
         public void AtualizarJogo(int id, JogoDomain jogoAtualizado)
         {
-            using (SqlConnection sqlConnection = new SqlConnection(STRINGCONEXAO))
+            using (SqlConnection sqlConnection = new SqlConnection(stringConexao))
             {
                 string queryUpdate = @"UPDATE jogo
                                        SET nomeJogo = @nomeJogo, dataLancamento = @dataLancamento, descricao = @descricao, valor = @valor;
@@ -38,7 +39,7 @@ namespace senai.inlock.webApi_.Repositories
 
         public JogoDomain BuscarPorId(int id)
         {
-            using (SqlConnection sqlConnection = new SqlConnection(STRINGCONEXAO))
+            using (SqlConnection sqlConnection = new SqlConnection(stringConexao))
             {
                 string querySelectById = @"SELECT idjogo, e.idEstudio, nomeJogo,dataLancamento,descricao, valor, e.idEstudio, nomeEstudio FROM jogo
                                          JOIN estudio e
@@ -80,7 +81,7 @@ namespace senai.inlock.webApi_.Repositories
 
         public void CadastrarJogo(JogoDomain novoJogo)
         {
-            using (SqlConnection sqlConnection = new SqlConnection(STRINGCONEXAO))
+            using (SqlConnection sqlConnection = new SqlConnection(stringConexao))
             {
                 string queryInsert = @"INSERT INTO jogo (idEstudio, nomeJogo, dataLancamento, descricao, valor)
                                        VALUES (@idEstudio, @nomeJogo, @dataLancamento, @descricao, @valor)";
@@ -100,7 +101,7 @@ namespace senai.inlock.webApi_.Repositories
 
         public void Deletarjogo(int id)
         {
-            using (SqlConnection sqlConnection = new SqlConnection(STRINGCONEXAO))
+            using (SqlConnection sqlConnection = new SqlConnection(stringConexao))
             {
                 string queryDelete = "DELETE FROM jogo WHERE idJogo = @idJogo";
 
@@ -118,7 +119,7 @@ namespace senai.inlock.webApi_.Repositories
         {
             List<JogoDomain> listaJogo = new List<JogoDomain>();
 
-            using (SqlConnection sqlConnection = new SqlConnection(STRINGCONEXAO))
+            using (SqlConnection sqlConnection = new SqlConnection(stringConexao))
             {
                 string querySelectAll = @"SELECT idjogo, e.idEstudio, nomeJogo,dataLancamento,descricao, valor, e.idEstudio, nomeEstudio FROM jogo
                                          JOIN estudio e
