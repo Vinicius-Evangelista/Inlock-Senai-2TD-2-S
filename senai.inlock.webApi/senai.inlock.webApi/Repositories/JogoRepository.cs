@@ -3,6 +3,7 @@ using senai.inlock.webApi_.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -10,7 +11,7 @@ namespace senai.inlock.webApi_.Repositories
 {
     public class JogoRepository : IJogoRepository
     {
-        const string STRINGCONEXAO = @"Data source= DESKTOP-DHSRSVI\SQLEXPRESS; initial_catalog= inlock_games_tarde; user Id=sa; pwd=senai@132;";
+        const string STRINGCONEXAO = @"Data Source= DESKTOP-DHSRSVI\SQLEXPRESS; initial catalog=inlock_games_tarde; user Id=sa; pwd=senai@132";
 
         public void AtualizarJogo(int id, JogoDomain jogoAtualizado)
         {
@@ -139,7 +140,7 @@ namespace senai.inlock.webApi_.Repositories
                             nomeJogo = reader[2].ToString(),
                             dataLancamento = Convert.ToDateTime(reader[3]),
                             descricao = reader[4].ToString(),
-                            valor = (float)reader[5],
+                            valor = Convert.ToDouble(reader[5]),
                             estudio = new EstudioDomain()
                             {
                                 idEstudio = Convert.ToInt32(reader[6]),

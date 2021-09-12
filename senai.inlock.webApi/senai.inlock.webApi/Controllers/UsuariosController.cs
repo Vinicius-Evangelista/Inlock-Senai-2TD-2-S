@@ -14,6 +14,8 @@ using System.Threading.Tasks;
 
 namespace senai.inlock.webApi_.Controllers
 {
+
+    [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
     public class UsuariosController : ControllerBase
@@ -45,7 +47,7 @@ namespace senai.inlock.webApi_.Controllers
 
 
                 //definição da chave de acesso ao token
-                var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("ASUE9APSHFJPOQWIFUJ"));
+                var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("ASUE9APSHF-JPOQWI-FUJ"));
 
                 //define as credenciais do token - signture
                 var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);

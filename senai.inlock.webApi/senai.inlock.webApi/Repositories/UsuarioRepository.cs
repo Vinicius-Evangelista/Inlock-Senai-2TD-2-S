@@ -10,12 +10,12 @@ namespace senai.inlock.webApi_.Repositories
 {
     public class UsuarioRepository : IUsuarioRepository
     {
-        const string STRINGCONEXAO = @"Data source= DESKTOP-DHSRSVI\SQLEXPRESS; initial_catalog= inlock_games_tarde; user Id=sa; pwd=senai@132;";
+        const string STRINGCONEXAO = @"Data Source= DESKTOP-DHSRSVI\SQLEXPRESS; initial catalog=inlock_games_tarde; user Id=sa; pwd=senai@132";
         public UsuarioDomain Login(string email, string senha)
         {
             using (SqlConnection sqlConnection = new SqlConnection(STRINGCONEXAO))
             {
-                string querySelect = @"SELECT t.titulo, email, senha FROM usuario
+                string querySelect = @"SELECT t.idTipoUsuario,idUsuario, email, senha FROM usuario
                                        JOIN tipoUsuario t
                                        ON usuario.idTipoUsuario = t.idTipoUsuario
                                        WHERE email = @email AND senha = @senha;";
@@ -30,18 +30,18 @@ namespace senai.inlock.webApi_.Repositories
 
 
 
-                    if (sqlReader != null)
+                    if (sqlReader.Read())
                     {
                         UsuarioDomain usuario = new UsuarioDomain()
                         {
-                            tipoUsuario = new TipoUsuarioDomain
-                            {
-                                titulo = sqlReader[0].ToString()
-                            },
-
-                            email = sqlReader[1].ToString(),
-                            senha = sqlReader[2].ToString()
+                            idTipoUsuario = Convert.ToInt32(sqlReader[0]),
+                            idUsuario = Convert.ToInt32(sqlReader[1]),
+                            email = sqlReader[2].ToString(),
+                            senha = sqlReader[3].ToString(),
                         };
+
+
+                        return usuario;
                     }
 
                     return null;

@@ -26,7 +26,7 @@ namespace senai.inlock.webApi_.Domains
         public string descricao { get; set; }
 
         [Required(ErrorMessage = "O valor do jogo é obrigatório")]
-        public float valor { get; set; }
+        public double valor { get; set; }
 
         public EstudioDomain estudio { get; set; }
     }

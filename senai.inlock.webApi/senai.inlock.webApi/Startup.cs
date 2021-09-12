@@ -33,9 +33,9 @@ namespace senai.inlock.webApi_
                 });
 
                 // Set the comments path for the Swagger JSON and UI.
-                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-                c.IncludeXmlComments(xmlPath);
+                //var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                //var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                //c.IncludeXmlComments(xmlPath);
             });
 
 
@@ -63,7 +63,7 @@ namespace senai.inlock.webApi_
                     ValidateLifetime = true,
 
                     //definição da chave de segurança
-                    IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("ASUE9APSHFJPOQWIFUJ")),
+                    IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("ASUE9APSHF-JPOQWI-FUJ")),
 
                     //tempo de verificação do token
                     ClockSkew = TimeSpan.FromHours(1),
