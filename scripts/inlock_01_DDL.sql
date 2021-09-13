@@ -11,7 +11,7 @@ CREATE TABLE estudio(
 	nomeEstudio VARCHAR(100) UNIQUE NOT NULL 
 );
 GO
-
+TRUNCATE TABLE estudio;
 
 CREATE TABLE jogo(
 	idJogo INT PRIMARY KEY IDENTITY(1,1),
@@ -23,6 +23,7 @@ CREATE TABLE jogo(
 );
 GO
 
+TRUNCATE TABLE jogo;
 
 CREATE TABLE tipoUsuario(
 	idTipoUsuario TINYINT PRIMARY KEY IDENTITY(1,1),
@@ -30,6 +31,7 @@ CREATE TABLE tipoUsuario(
 );
 GO
 
+TRUNCATE TABLE tipoUsuario;
 
 CREATE TABLE usuario(
 	idUsuario INT PRIMARY KEY IDENTITY(1,1),
@@ -37,4 +39,15 @@ CREATE TABLE usuario(
 	email VARCHAR(256) UNIQUE NOT NULL,
 	senha VARCHAR(12) NOT NULL CHECK(len(senha) >=8	) 
 );
+GO
+
+TRUNCATE TABLE usuario;
+
+DROP TABLE estudio;
+GO
+DROP TABLE jogo;
+GO
+DROP TABLE tipoUsuario;
+GO
+DROP TABLE usuario;
 GO

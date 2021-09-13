@@ -10,7 +10,7 @@ namespace senai.inlock.webApi_.Repositories
 {
     public class JogoRepository : IJogoRepository
     {
-        const string STRINGCONEXAO = @"Data Source= DESKTOP-DHSRSVI\SQLEXPRESS; initial catalog=inlock_games_tarde; user Id=sa; pwd=senai@132";
+        const string stringConexao = @"Data Source= DESKTOP-DHSRSVI\SQLEXPRESS; initial catalog=inlock_games_tarde; user Id=sa; pwd=senai@132";
 
         //const string STRINGCONEXAO = @"Data source= DESKTOP-DHSRSVI\SQLEXPRESS; initial_catalog= inlock_games_tarde; user Id=sa; pwd=senai@132;";
 
@@ -19,13 +19,14 @@ namespace senai.inlock.webApi_.Repositories
             using (SqlConnection sqlConnection = new SqlConnection(stringConexao))
             {
                 string queryUpdate = @"UPDATE jogo
-                                       SET nomeJogo = @nomeJogo, dataLancamento = @dataLancamento, descricao = @descricao, valor = @valor;
-                                       WHERE idJogo =  @idJogo  ";
+                                       SET nomeJogo = @nomeJogo, dataLancamento = @dataLancamento, descricao = @descricao,  valor = @valor
+                                       WHERE idJogo =  @idJogo";
                 sqlConnection.Open();
 
                 using (SqlCommand sqlCommand = new SqlCommand(queryUpdate, sqlConnection))
                 {
                     //adicionando os parâmetros para colocar no sql
+                    //sqlCommand.Parameters.AddWithValue("idEstudio", jogoAtualizado.idEstudio);
                     sqlCommand.Parameters.AddWithValue("@nomeJogo", jogoAtualizado.nomeJogo);
                     sqlCommand.Parameters.AddWithValue("@dataLancamento", jogoAtualizado.dataLancamento);
                     sqlCommand.Parameters.AddWithValue("@descricao", jogoAtualizado.descricao);
@@ -54,7 +55,7 @@ namespace senai.inlock.webApi_.Repositories
                     sqlCommand.Parameters.AddWithValue("@idJogo", id);
                     SqlDataReader reader = sqlCommand.ExecuteReader();
 
-                    if (reader != null)
+                    if (reader.Read())
                     {
 
                         JogoDomain jogo = new JogoDomain()
@@ -64,7 +65,7 @@ namespace senai.inlock.webApi_.Repositories
                             nomeJogo = reader[2].ToString(),
                             dataLancamento = Convert.ToDateTime(reader[3]),
                             descricao = reader[4].ToString(),
-                            valor = (float)reader[5],
+                            valor = Convert.ToDouble(reader[5]),
                             estudio = new EstudioDomain()
                             {
                                 idEstudio = Convert.ToInt32(reader[6]),

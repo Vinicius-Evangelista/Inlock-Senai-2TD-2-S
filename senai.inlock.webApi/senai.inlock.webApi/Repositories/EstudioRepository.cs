@@ -10,12 +10,8 @@ namespace senai.inlock.webApi_.Repositories
 {
     public class EstudioRepository : IEstudioRepository
     {
-        private string stringConexao = "Data Source=DESKTOP-20INV7D\\SQLEXPRESS; initial catalog=inlock_games_tarde; user Id=sa; pwd=SenaiSamuel1";
+        const string stringConexao = @"Data Source=DESKTOP-DHSRSVI\SQLEXPRESS; initial catalog=inlock_games_tarde; user Id=sa; pwd=senai@132";
 
-        public void CadastrarEstudio(EstudioDomain estudioDomain)
-        {
-            throw new NotImplementedException();
-        }
 
         public List<EstudioDomain> ListarEstudios()
         {
@@ -44,10 +40,11 @@ namespace senai.inlock.webApi_.Repositories
 
                         listaEstudios.Add(estudio);
                     }
+                  
+                 return listaEstudios;
                 }
            }
 
-            return listaEstudios;
         }
     }
 }

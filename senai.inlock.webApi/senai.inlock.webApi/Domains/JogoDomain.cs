@@ -20,6 +20,7 @@ namespace senai.inlock.webApi_.Domains
         public string nomeJogo { get; set; }
 
         [Required(ErrorMessage = "A data de lançamento do jogo é obrigatório")]
+        [DataType(DataType.Date)]
         public DateTime dataLancamento { get; set; }
 
         [Required(ErrorMessage = "A descrição do jogo é obrigatório")]

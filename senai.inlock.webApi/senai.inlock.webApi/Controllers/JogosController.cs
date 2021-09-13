@@ -87,8 +87,10 @@ namespace senai.inlock.webApi_.Controllers
             }
         }
 
+
+        //Definindo níveis de permissão
         [Authorize(Roles = "1")]
-        [HttpDelete("excluir/id")]
+        [HttpDelete("excluir/{id}")]
         public IActionResult Delete(int id)
         {
             _jogoRepository.Deletarjogo(id);

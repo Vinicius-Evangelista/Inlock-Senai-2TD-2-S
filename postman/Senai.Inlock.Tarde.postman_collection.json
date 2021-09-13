@@ -1,0 +1,289 @@
+{
+	"info": {
+		"_postman_id": "baa2f822-4778-4f85-8654-11a4c248bcd5",
+		"name": "Senai.Inlock.Tarde",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "http://localhost:5000/api/usuarios/login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiQ2xhaW0gc2xhIjoibWFpcyBzbGEiLCJleHAiOjE2MzE0MDYwNzEsImlzcyI6InNlbmFpLmlubG9jay53ZWJBcGkiLCJhdWQiOiJzZW5haS5pbmxvY2sud2ViQXBpIn0.FDlk_iBuqzfn6rfSRs9p3FeqyekfSsGL7iqfGsg4x3Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"admin@admin.com\",\r\n    \"senha\":\"adm12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/usuarios/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"usuarios",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Jogos",
+			"item": [
+				{
+					"name": "ListarJogos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiQ2xhaW0gc2xhIjoibWFpcyBzbGEiLCJleHAiOjE2MzE1MTAyMjgsImlzcyI6InNlbmFpLmlubG9jay53ZWJBcGkiLCJhdWQiOiJzZW5haS5pbmxvY2sud2ViQXBpIn0.TTqbmkaRscc2Z1wKseV0XwWIQD8nmzAAJ_hE7B30bbg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/jogos/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"jogos",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiQ2xhaW0gc2xhIjoibWFpcyBzbGEiLCJleHAiOjE2MzE1MTAyMjgsImlzcyI6InNlbmFpLmlubG9jay53ZWJBcGkiLCJhdWQiOiJzZW5haS5pbmxvY2sud2ViQXBpIn0.TTqbmkaRscc2Z1wKseV0XwWIQD8nmzAAJ_hE7B30bbg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/jogos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"jogos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtualizarJogo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiQ2xhaW0gc2xhIjoibWFpcyBzbGEiLCJleHAiOjE2MzE1MTAyMjgsImlzcyI6InNlbmFpLmlubG9jay53ZWJBcGkiLCJhdWQiOiJzZW5haS5pbmxvY2sud2ViQXBpIn0.TTqbmkaRscc2Z1wKseV0XwWIQD8nmzAAJ_hE7B30bbg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idEstudio\": 1,\r\n    \"nomeJogo\": \"Diablo 3\",\r\n    \"dataLancamento\": \"2012-05-15\",\r\n    \"descricao\": \"é um jogo que contém bastante ação e é viciante, seja você um novato ou um fã.\",\r\n    \"valor\": 90\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/jogos/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"jogos",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarJogo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiQ2xhaW0gc2xhIjoibWFpcyBzbGEiLCJleHAiOjE2MzE1MTIwOTksImlzcyI6InNlbmFpLmlubG9jay53ZWJBcGkiLCJhdWQiOiJzZW5haS5pbmxvY2sud2ViQXBpIn0.lCT58NFd1s7HGmwbwdaQM-PJJ_RCX56hxAreE8ZTrgs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/jogos/excluir/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"jogos",
+								"excluir",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "403 - CLIENTE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNsaWVudGVAY2xpZW50ZS5jb20iLCJqdGkiOiIyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiMiIsIkNsYWltIHNsYSI6Im1haXMgc2xhIiwiZXhwIjoxNjMxNTEyMjgzLCJpc3MiOiJzZW5haS5pbmxvY2sud2ViQXBpIiwiYXVkIjoic2VuYWkuaW5sb2NrLndlYkFwaSJ9.jWOn1HFS-_vRztFqeZr9-LAM9NKmb5vQOCNBfZsmC30",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/jogos/excluir/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"jogos",
+								"excluir",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Estudios",
+			"item": [
+				{
+					"name": "ListarEstudios",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiQ2xhaW0gc2xhIjoibWFpcyBzbGEiLCJleHAiOjE2MzE1MTMwMTMsImlzcyI6InNlbmFpLmlubG9jay53ZWJBcGkiLCJhdWQiOiJzZW5haS5pbmxvY2sud2ViQXBpIn0.I6-vlOrbu7kH8LAj37aKElBveJjfiKsxZYpkysVzrjA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/estudios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"estudios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "403 - Cliente",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNsaWVudGVAY2xpZW50ZS5jb20iLCJqdGkiOiIyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiMiIsIkNsYWltIHNsYSI6Im1haXMgc2xhIiwiZXhwIjoxNjMxNTEzMjg4LCJpc3MiOiJzZW5haS5pbmxvY2sud2ViQXBpIiwiYXVkIjoic2VuYWkuaW5sb2NrLndlYkFwaSJ9.Qv2mWFcVVj7J23-H8r6kksaN5QfBcDqMwX6suH4NgVo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/estudios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"estudios"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

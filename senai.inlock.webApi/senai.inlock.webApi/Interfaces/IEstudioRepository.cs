@@ -8,11 +8,6 @@ namespace senai.inlock.webApi_.Interfaces
 {
     interface IEstudioRepository
     {
-        /// <summary>
-        /// cadastra um novo usuário
-        /// </summary>
-        /// <param name="estudioDomain">um objeto contendo as informações do novo objeto</param>
-        public void CadastrarEstudio(EstudioDomain estudioDomain);
 
         /// <summary>
         /// lista todos os estudios cadastrados
